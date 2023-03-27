@@ -1,0 +1,125 @@
+body{
+    background-image: url("https://i.pinimg.com/736x/cf/e1/6a/cfe16a382a65e19ab7d62767f764a54b.jpg");
+    height: 100%;
+    width: 100%;
+    border-style: solid;
+    border-radius: 10px;
+    
+    font-family: 'Lucida Handwriting', fantasy;
+    
+}
+
+.explicacion{
+    font-size: 25px;
+}
+
+
+hr{
+    border-top: 5px dashed black;
+    width: 500px;
+
+}
+
+/* Estilo de la calculadora */
+.calculadora {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.pantalla {
+    /* Estilos del fondo*/
+    background-color: #709C34;
+    font-family: "Lucida Console", Courier, monospace;
+    font-weight: bold;
+    font-size: 35px;
+
+    border-radius: 10px;
+    padding: 20px;
+
+    margin-bottom: 10px;
+}
+#mCientifico, .cientifica{
+    background-color: #9AD58E;
+}
+
+.cientifica{
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: black;
+}
+
+.cientifica button{
+    background-color: #F5A912;
+}
+
+#operacion {
+    display: inline;
+}
+
+.error{
+    color: #AA4B39;
+    font-size: 25px;
+}
+
+table button{
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
+
+table{
+    background-color: gray;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+/* Estilos para diferentes tamaños de pantalla*/
+
+/* Para pantallas grandes*/
+@media screen and (min-width:1800px) {
+    .pantalla{
+        /* Posición y tamaño*/
+        margin-left: 40%;
+        width: 20%;
+    }
+    .calculadora table, #mCientifico{
+        margin-left: 45%;
+    }
+
+}
+
+/* Para pantallas medianas*/
+@media screen and (max-width:1800px) {
+    .pantalla{
+        /* Estilo de elementos*/
+        font-size: 25px;
+
+        /* Posición y tamaño*/
+        margin-left: 35%;
+        width: 35%;
+
+    }
+    .calculadora table, #mCientifico{
+        margin-left: 40%;
+    }
+}
+
+/* Para pantallas medianas*/
+@media screen and (max-width:960px) {
+    .pantalla{
+        /* Estilo de elementos*/
+        font-size: 20px;
+
+        /* Posición y tamaño*/
+        margin-left: 25%;
+        width: 50%;
+
+    }
+    .calculadora table, #mCientifico{
+        margin-left: 30%;
+    }
+}
+
+
+

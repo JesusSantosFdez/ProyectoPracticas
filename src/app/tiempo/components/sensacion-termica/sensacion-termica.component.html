@@ -1,0 +1,40 @@
+<body>
+
+    <h1>Sensación térmica: </h1>
+    <p-splitter [panelSizes]="[25, 75]" [style]="{ height: '300px' }" styleClass="mb-5">
+        <ng-template pTemplate>
+            <div class="col flex align-items-center justify-content-center">
+                <h2>Máxima: {{maxima}}</h2>
+                <hr>
+                <img src="../../../../assets/sensTermica/modo.png" alt="">
+                <hr>
+                <h2>Mínima: {{minima}}</h2>
+            </div>
+        </ng-template>
+        <ng-template pTemplate>
+            <div class="col flex align-items-center justify-content-center">
+                <!-- En el segundo panel se van a insertar tantos paneles como datos tenga los datos-->
+                <ng-container *ngIf="ndatos>0; else nohaydatos">
+
+                    <!-- Creamos un nuevo contenedor que contenga los datos-->
+                    <p-splitter>
+                        <!-- Para cada uno de los elementos se va a crear un nuevo contendor que muestre su hora y su sensación asociada -->
+                        <ng-template pTemplate *ngFor="let data of datos">
+                            <div class="col flex align-items-center justify-content-center">
+                                <p> A partir de las <span class="importante">{{data.hora}}:00 h</span> se sentirá una
+                                    temperatura de <span class="importante">{{data.value}} ºC</span>.</p>
+                            </div>
+                        </ng-template>
+                    </p-splitter>
+
+                </ng-container>
+                <ng-template #nohaydatos>
+
+                    <p id="noMoreText">No hay más datos para mostrar</p>
+                </ng-template>
+
+
+            </div>
+        </ng-template>
+    </p-splitter>
+</body>

@@ -1,0 +1,30 @@
+<h1>Estado del cielo:</h1>
+
+
+
+<p-splitter [panelSizes]="[25, 75]" [style]="{ height: 'auto' }" styleClass="mb-5">
+
+    <ng-template pTemplate>
+        <div class="col flex align-items-center justify-content-center">
+            
+            <ng-container *ngIf="estadoPeriodos; else noPeriodos">
+                
+                <p-splitter>
+
+                    <ng-template pTemplate *ngFor="let desc of descripcionesPeriodo; let i=index">
+                        <app-estado-cielo-imagenes-periodo [periodo]="estado[i+3].periodo"></app-estado-cielo-imagenes-periodo>
+                        <app-estado-cielo-imagenes [descripcion]="desc"></app-estado-cielo-imagenes>
+                    </ng-template>
+
+                </p-splitter>
+                
+            </ng-container>
+
+
+            <ng-template #noPeriodos>
+                        <app-estado-cielo-imagenes [descripcion]="descripcion[0]"></app-estado-cielo-imagenes>
+            </ng-template>
+        </div>
+    </ng-template>
+
+</p-splitter>

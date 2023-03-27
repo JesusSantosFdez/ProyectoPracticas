@@ -1,0 +1,48 @@
+<div class="grid">
+    <!-- Temperatura máxima y mínima -->
+    <div class="col-5 ml-7 mr-7 temperatura calor">
+        <p-card header="Temperatura Máxima">
+            <ng-template pTemplate="header">
+                <img alt="Card" class="card-img" src="https://th.bing.com/th/id/R.7c6c69789bcca5b9598a9779771289cd?rik=zAXUF6fpQO8ybA&pid=ImgRaw&r=0" />
+            </ng-template>
+            <div class="info">
+                {{temperatura.maxima}} ºC 
+                <!-- Elementos que van a mostrar iconos para ilustrar las temperaturas --> 
+                <ng-container *ngIf="temperatura.maxima<23; else mayor25">
+                    <img class="iconoTemp" src="../../../../assets/temperatura/frio.png" alt="">
+                </ng-container>
+               <ng-template #mayor25>
+                    <ng-container *ngIf="temperatura.maxima>35; else tempMedia">
+                        <img class="iconoTemp" src="../../../../assets/temperatura/desierto.png" alt="">
+                    </ng-container>
+                    <ng-template #tempMedia>
+                        <img class="iconoTemp" src="../../../../assets/temperatura/sol.png" alt="">
+                    </ng-template>          
+                </ng-template>
+            </div>    
+        </p-card>
+    </div>
+    
+    <div class="col-5 ml-7 temperatura frio">
+        <p-card header="Temperatura Mínima" >
+            <ng-template pTemplate="header">
+                <img class="card-img" alt="Card" src="https://th.bing.com/th/id/OIP.ZqT7hTpQuyTqonAlexbKeQHaEo?pid=ImgDet&rs=1" />
+            </ng-template>
+            <div class="info">
+                {{temperatura.minima}} ºC
+                <!-- Elementos que van a mostrar iconos para ilustrar las temperaturas --> 
+                <ng-container *ngIf="temperatura.minima<5; else mayor5">
+                    <img class="iconoTemp" src="../../../../assets/temperatura/arrecio.png" alt="">
+                </ng-container>
+               <ng-template #mayor5>
+                    <ng-container *ngIf="temperatura.minima>20; else frioMedio">
+                        <img class="iconoTemp" src="../../../../assets/temperatura/derretio.png" alt="">
+                    </ng-container>
+                    <ng-template #frioMedio>
+                        <img class="iconoTemp" src="../../../../assets/temperatura/airecito.png" alt="">
+                    </ng-template>          
+                </ng-template>
+            </div>
+        </p-card>
+    </div>
+</div>

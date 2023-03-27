@@ -1,0 +1,31 @@
+<body>
+    <div class="texto"> TIEMPO EN: </div>
+
+
+    <!-- Se van a mostrar un par de tarjetas para mostrar información sobre el municipio -->
+
+    <div class="grid my-4 mx-5 inicio">
+        <div class="col-6">
+            <p-card header="Nombre del municipio: "  class="CartaInicio">
+                <p class="TextoCarta">                    
+                    {{datosMun[0].nombre | uppercase}}
+                </p>
+            </p-card>
+        </div>
+        <div class="col-6">
+            <p-card header="Provincia: " class="CartaInicio">
+                <p class="TextoCarta">                    
+                    {{datosMun[0].provincia | uppercase}}
+                </p>
+            </p-card>
+        </div>
+    </div>
+
+    <p-accordion [multiple]="false">
+        <p-accordionTab [header]="(obtenerNombreDiaSemanaFecha(prediccion.fecha))" *ngFor="let prediccion of datosMun[0].prediccion.dia; index as i;">
+            
+            <app-datos-dia [datos]="prediccion"></app-datos-dia>
+
+        </p-accordionTab>
+    </p-accordion>
+</body>

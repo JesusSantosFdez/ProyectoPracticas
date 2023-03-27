@@ -1,0 +1,66 @@
+<body>
+    <h1 class="texto">Tiempo :</h1>
+
+    <br><br>
+
+    <!-- Elemento contenedor de todo el resto de elementos de la web-->
+    <div class="grid">
+
+        <!-- Dentro de la página se van a tomar dos columnas: p-col-6*2 -->
+        <!-- Elemento que va a mostrar la barra de búsqueda -->
+        <div class="col-4 busqueda">
+            <p class="texto"> Introduzca el nombre del municipio que desea buscar: (Primera letra en mayúsculas). </p>
+                <span class="p-input-icon-right">
+                    <i class="pi pi-home"></i>
+                    <input type="text" class="p-inputtext-lg" pInputText placeholder="Municipio" [value]="munBus" (keydown.enter)="buscarMun($event)" />
+                </span>
+        </div>
+        <!-- Elemento que va a mostrar la información relacionada con el municipio mostrado -->
+        <div class="col-7 info">
+            <!-- Panel que va a mostrar un mensaje de que se ha producido un erro en la búsqueda -->
+            <ng-container *ngIf="!errorMun; else Error">
+
+                <!-- Aquí se va a mostrar la informaciónl municipio seleccionado por el usuario -->
+                <p-panel header="Nombre:" [toggleable]="true">
+                    {{datosMun[0].nombre}}
+                </p-panel>
+
+                <p-panel header="Provincia:" [toggleable]="true">
+                    {{datosMun[0].provincia}}
+                </p-panel>
+                
+                <p-panel header="ID AEMET:" [toggleable]="true">
+                    {{datosMun[0].id}}
+                </p-panel>
+
+                <hr class="separador">
+
+                <p-panel header="T. MÁX:" class="temperatura">
+                    {{datosMun[0].prediccion.dia[0].temperatura.maxima}}
+                    <img class="icono" src="../../assets/temperatura.png" alt="Icono de llama">
+                
+                </p-panel>
+
+                <p-panel header="T. MIN:"  class="temperatura">
+                    {{datosMun[0].prediccion.dia[0].temperatura.minima}}
+                    <img class="icono" src="../../assets/frio (1).png" alt="Icono de llama">
+                </p-panel>
+            
+                <!-- A continuación va a proporcionar un botón para que se lleve al usuario a la pantalla de detalle -->
+                <button pButton pRipple type="button" label="¡Mostrar más!" class="p-button-warning masInfo" (click)="mostrarMunicipio()"></button>
+            
+            </ng-container>
+            <ng-template #Error>
+                <p-panel header="Error" class="error">
+                    Se ha producido un error al intentar realizar la búsqueda del municipio "{{munBus}}". 
+                    <br><br> Por favor, compruebe que ha introducido el nombre correcto y
+                    recuerde que  <span class="no"> NO </span> <span id="nombMun">se deben incluir tildes. </span>
+                </p-panel>
+            </ng-template>
+            
+        </div>
+
+    </div>
+    
+    <br><br>
+</body>

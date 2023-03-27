@@ -1,0 +1,51 @@
+/* Estilo del cuerp de la página en general */
+body{
+    background-image: url("https://www.wallpaperup.com/uploads/wallpapers/2013/03/05/48225/51363d6e071d6af80e8231e89c34bb42.jpg");
+    background-size: auto;
+    height: 100%;
+    width: 100%;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: #313A75;
+    
+    font-family: 'Monaco', monospace;
+    padding: 20px;
+}
+
+/* Estilo del texto incluido en la página pero sin ningún otro elemento. Para que se vea el contenido del texto por encima del fondo
+se hace uso de un color de fondo difuminado*/
+.texto{
+    padding: 10px;
+    color: white;
+    background-color: rgb(0,0,0,0.5);
+    height: fit-content;
+    width: fit-content;
+    margin-left: 45%;
+    font-size: xx-large;
+}
+
+/* Estilo de las cartas que muestran los datos del municipio sobre el que se muestra la información*/
+::ng-deep .inicio .p-card {
+    background-color: #b2b2b297;
+    background-image:none;
+    border:double black 3px;
+    color:black;
+    margin-bottom: 6px;
+}    
+
+.TextoCarta{
+    font-family: Andale Mono, monospace;
+    font-size: xx-large;
+    font-weight: bolder;
+    text-decoration: wavy overline underline;
+    text-decoration-thickness: 3px;
+    text-decoration-color: rgba(174, 0, 255, 0.263);
+    margin: 0;
+    margin-bottom: 5px;
+    margin-left: 37%;
+
+}
+  
+
+  
+  

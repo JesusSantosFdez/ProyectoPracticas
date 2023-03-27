@@ -1,0 +1,46 @@
+<h1>Precipitaciones:</h1>
+<p-splitter [panelSizes]="[25, 75]" [style]="{ height: '300px' }" styleClass="mb-5">
+    
+    <ng-template pTemplate>
+        <!-- En la primera pantalla se va a mostrar las probabilidad de precipitación general del día-->
+        <div class="col flex align-items-center justify-content-center">
+            <h2>Probabilidad de precipitaciones: {{precipitaciones[0].value}}%.</h2>
+
+        <ng-container *ngIf="lluvia; else elseTemplate">
+            <img src="../../../../assets/precipitaciones/paraguas.png" alt="icono de paraguas">
+        </ng-container>
+        <ng-template #elseTemplate>
+                <img src="../../../../assets/precipitaciones/sombrilla.png" alt="icono de sombrilla">
+        </ng-template></div>
+        
+    </ng-template>
+
+        <!-- A continuación hay que tener en cuenta los datos recibidos. Si el tamaño de los datos es > 3 entonces
+        se tiene un registro por periodo de la probabilidad de precipitación por cada cuarto de día-->
+        <ng-template pTemplate>
+            <div class="col flex align-items-center justify-content-center">
+                <!-- En caso de que los datos pasados sean mayores de 3 se deben mostrar las probabilidades.-->
+                <ng-container *ngIf="nDatos>3; else nohaydatos">
+                    <!-- Creamos un nuevo contenedor que contenga los datos-->
+                    <p-splitter>
+                        <!-- Para cada uno de los elementos se va a crear un nuevo contendor que muestre su hora y su sensación asociada -->
+                        <ng-template pTemplate *ngFor="let prec of precipitacionesPeriodos">
+                            <div class="col flex align-items-center justify-content-center">
+                                <p> El periodo comprendido entre las horas <span class="importante">{{prec.periodo}}</span> consta de
+                                    una probabilidad de precipitación de un <span class="importante">{{prec.value}}%</span>.</p>
+                            </div>
+                        </ng-template>
+                    </p-splitter>
+
+                </ng-container>
+                <ng-template #nohaydatos>
+
+                    <p id="noMoreText">No hay más datos sobre la probabilidad de precipitación a lo largo del día.</p>
+                </ng-template>
+
+
+            </div>
+        </ng-template>
+
+
+</p-splitter>

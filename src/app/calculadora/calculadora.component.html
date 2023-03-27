@@ -1,0 +1,71 @@
+<body>
+    <h1>Calculadora :</h1>
+    <p class="explicacion"> Calculadora secuencial. Inserte dos dígitos separados por un operando para realizar una operación.
+        El <b>resultado</b> de esta operación será utilizado como <b>primer operando</b> de la siguiente.
+    </p>
+    <p class="explicacion">Para reiniciar la operación pulse sobre el botón <span style="color:red; font-weight: bold;">'C'</span>.</p>
+
+    <br>
+    <hr>
+    <br><br>
+        <!-- Se incluye un botón para mostrar el "modo ciéntifico" de la calculadora -->
+        <button id="mCientifico" pButton pRipple type="button" label="Mostrar/ocultar científico" icon="pi pi-sync" class="p-button-rounded" (click)="mostrarCientifico()"></button>
+    
+        <div class="calculadora">
+        
+        <!-- Elemento que va a servir como la pantalla de la calculadora en la que se va a mostrar los inputs escritos por el usuario
+        más el resultado obtenido -->
+        <div class="pantalla">
+            <ng-container *ngIf="error; else operaciones">
+                <p class="error"> ERROR. La <b>sintaxis</b> no es correcta. Por favor pulse la tecla 'C' para reiniciar.</p>
+            </ng-container>
+            <ng-template #operaciones>
+                {{operando1}} <p id="operacion" *ngIf="opExiste">{{operador | operator}} {{operando2}}</p> <p *ngIf="resCorre"> = {{resultado}}</p>
+            </ng-template>
+            
+        </div>
+
+
+        <!-- Se incluyen todos los botones de la calculadora:-->
+        <!-- Se incluyen los botones de la calculadora cientifica -->
+        <!-- Los botones que sólo hacen uso del operador con 1 único digito no están implementados-->
+        <table class="cientifica" *ngIf="cientifico">
+            <!-- Ocuparán tan sólo una línea -->
+            <tr>
+                <td><button pButton pRipple type="button" label="√" class="p-button-lg"></button></td>
+                <td><button pButton pRipple type="button" label="^" class="p-button-lg" (click)="pulsarBoton('elev')"></button></td>
+                <td><button pButton pRipple type="button" label="%" class="p-button-lg" ></button></td>
+                
+            </tr>
+        </table>
+        <!-- Se crea una tabla para cada uno de los botones-->
+        <table>
+            <!-- Por cada fila habrá cuatro elementos y habrá 4 filas-->
+            <tr>
+                <td><button pButton pRipple type="button" label="7" class="p-button-lg" (click)="pulsarBoton('7')"></button></td>
+                <td><button pButton pRipple type="button" label="8" class="p-button-lg" (click)="pulsarBoton('8')"></button></td>
+                <td><button pButton pRipple type="button" label="9" class="p-button-lg" (click)="pulsarBoton('9')"></button></td>
+                <td><button pButton pRipple type="button" label="C" class="p-button-danger p-button-lg" (click)="borrar()"></button></td>
+            </tr>
+            <tr>
+                <td><button pButton pRipple type="button" label="4" class="p-button-lg" (click)="pulsarBoton('4')"></button></td>
+                <td><button pButton pRipple type="button" label="5" class="p-button-lg" (click)="pulsarBoton('5')"></button></td>
+                <td><button pButton pRipple type="button" label="6" class="p-button-lg" (click)="pulsarBoton('6')"></button></td>
+                <td><button pButton pRipple type="button" label="×" class="p-button-lg" (click)="pulsarBoton('mult')"></button></td>
+            </tr>
+            <tr>
+                <td><button pButton pRipple type="button" label="1" class="p-button-lg" (click)="pulsarBoton('1')"></button></td>
+                <td><button pButton pRipple type="button" label="2" class="p-button-lg" (click)="pulsarBoton('2')"></button></td>
+                <td><button pButton pRipple type="button" label="3" class="p-button-lg" (click)="pulsarBoton('3')"></button></td>
+                <td><button pButton pRipple type="button" label="÷" class="p-button-lg" (click)="pulsarBoton('div')"></button></td>
+            </tr>
+            <tr>
+                <td><button pButton pRipple type="button" label="0" class="p-button-lg" (click)="pulsarBoton('0')"></button></td>
+                <td><button pButton pRipple type="button" label="-" class="p-button-lg" (click)="pulsarBoton('min')"></button></td>
+                <td><button pButton pRipple type="button" label="+" class="p-button-lg" (click)="pulsarBoton('add')"></button></td>
+                <td><button pButton pRipple type="button" label="=" class="p-raised-button p-button-success p-button-lg" (click)="ejecutar()"></button></td>
+            </tr>
+        </table>
+    </div>
+
+</body>

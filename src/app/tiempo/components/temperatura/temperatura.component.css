@@ -1,0 +1,38 @@
+/* Estilo de las cartas que muestran la temperatura */
+:host ::ng-deep .temperatura .p-card {
+    border: solid 3px;
+    height: 400px;
+    margin-bottom: 80px;
+}
+
+:host ::ng-deep .calor .p-card {
+    border-color: #FFB273;
+}
+
+:host ::ng-deep .frio .p-card {
+    border-color: #5770AB;
+}
+
+.p-card {
+    color: #FFB273;
+}
+
+:host ::ng-deep .frio .p-card .p-card-header{
+    color: #5770AB;
+}
+.card-img{
+    height: 200px;
+    width: 100%;
+}
+
+.iconoTemp{
+    height: 70px;
+    width: 70px;
+    margin-left: 10px;
+}
+
+.info{
+    text-align: center;
+    font-size: 70px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}

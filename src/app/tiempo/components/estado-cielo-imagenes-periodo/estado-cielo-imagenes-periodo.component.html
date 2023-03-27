@@ -1,0 +1,21 @@
+<div *ngIf="periodo !== ''">
+    <ng-container *ngIf="periodo === '00-06'; else mediodia">
+        <img src="../../../../assets/estadoCielo/amanecer (2).png" alt=""> <img class="flecha" src="../../../../assets/flecha-correcta.png" alt="">
+    </ng-container>
+    <ng-template #mediodia>
+        <ng-container *ngIf="periodo === '06-12'; else atardecer">
+            <img src="../../../../assets/estadoCielo/medioDia.png" alt=""> <img class="flecha" src="../../../../assets/flecha-correcta.png" alt="">
+        </ng-container>
+        <ng-template #atardecer>
+            <ng-container *ngIf="periodo === '12-18'; else noche">
+                <img src="../../../../assets/estadoCielo/atardecer (2).png" alt=""> <img class="flecha" src="../../../../assets/flecha-correcta.png" alt="">
+            </ng-container>
+
+            <ng-template #noche>
+                <img src="../../../../assets/estadoCielo/noche.png" alt=""> <img class="flecha" src="../../../../assets/flecha-correcta.png" alt="">
+            </ng-template>
+        </ng-template>
+        
+    </ng-template>
+    
+</div>

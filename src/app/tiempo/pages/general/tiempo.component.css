@@ -1,0 +1,139 @@
+body{
+    background-image: url("https://th.bing.com/th/id/R.cf5d073cf01773912e24cf534c8ae018?rik=IurNN5e5tlT93A&riu=http%3a%2f%2fwallpapercave.com%2fwp%2fwc1729425.jpg&ehk=OqttV4uI0jGXPOKH2pgiYbmgKzB1Hp8x8On%2btbZ6AgU%3d&risl=&pid=ImgRaw&r=0");
+    height: 100%;
+    width: 100%;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: #313A75;
+    
+    font-family: 'Monaco', monospace;
+    padding: 20px;
+}
+
+.texto{
+    color: white;
+    background-color: rgb(0,0,0,0.5);
+    height: fit-content;
+    width: fit-content;
+}
+
+.busqueda{
+    /*background-color: pink;*/
+    margin-right: 25px;
+    margin-top: 13em;
+}
+
+.info{
+
+    /*background-color: greenyellow;*/
+    padding-left: 50px;
+}
+
+/* Estilo del mensaje de ERROR*/
+:host ::ng-deep .error .p-panel  .p-panel-header{
+    background: red !important;
+    color: white !important;
+
+}
+:host ::ng-deep .error .p-panel {
+    border-radius: 5px;
+    border: solid red 5px;
+    padding: 2px;
+}
+
+.no, #nombMun {
+    font-weight: bold;
+    
+}
+
+.no{
+    color: red;
+}
+
+/* Estilo de la barra de búsqueda de municipios*/
+::ng-deep .p-inputtext-lg {
+  color: rgb(68, 155, 255) !important;
+  background-color: white !important;
+  width: 300px;
+  padding: 10px;
+  border: solid black;
+  border-radius: 5px;
+  margin-left: 30px;
+}
+
+::ng-deep .p-inputtext-lg:hover {
+  background-color: rgb(243, 243, 243) !important;
+  color: rgb(255, 199, 17) !important;
+  font-weight: bold;
+}
+
+::ng-deep .p-inputtext-lg:focus {
+  font-weight: bold;
+  color: rgb(68, 155, 255) !important;
+  background-color: white;
+}
+
+/* Estilo de la información mostrada para cada uno de los municipios */
+:host ::ng-deep .p-panel  .p-panel-header{
+    background: #C3EAEA !important;
+    color: #FF8F8F !important;
+    font-size: medium;
+}
+:host ::ng-deep  .p-panel {
+    border-radius: 5px;
+    border: double #FFF1D4 5px;
+    padding: 1px;
+    margin-bottom: 5px;
+}
+
+/* Estilo del separador */
+.separador{
+    height: 5px;
+    background-color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* Estilo de los iconos para mostrar la temperatura*/
+.icono{
+    width: 50px;
+    height: 50px;
+    margin-bottom: none;
+    margin-left: 20px;
+}
+
+/* Estilo del mensaje de ERROR*/
+:host ::ng-deep .temperatura .p-panel {
+    width: 200px;
+    display: inline-block;
+    margin-left: 200px;
+    font-size: large;
+    font-weight: bold;
+}
+
+/* Estilo del botón que te lleva al detalle del municipio buscado */
+.masInfo:hover{
+    display: block !important;
+    margin-top: 35px !important;
+    margin-left: 435px !important;
+    background-color: #FF9090 !important;
+
+    color: #FFE6B5 !important;
+    font-weight: bold !important;
+
+    border-color: #C3EAEA !important;
+    border-width: 2px !important;
+}
+
+
+ .masInfo{
+    display: block !important;
+    margin-top: 35px !important;
+    margin-left: 435px !important;
+    background-color: #C3EAEA !important;
+
+    color: #FF9090 !important;
+    font-weight: bold !important;
+
+    border: 2px double #FFE6B5 !important;
+}

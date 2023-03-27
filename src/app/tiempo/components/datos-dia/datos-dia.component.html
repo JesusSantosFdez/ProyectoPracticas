@@ -1,0 +1,16 @@
+<body>
+        
+        
+        <!-- Mostramos los datos de la temperatura -->
+        <h1> Temperatura: </h1>
+        <app-temperatura [temperatura]="datos.temperatura"></app-temperatura>
+        <app-sensacion-termica [sensacionTermica]="datos.sensTermica"></app-sensacion-termica>
+
+        <!-- Mostrar los datos del cielo -->
+        <h1>Cielo: </h1>
+        <app-precipitaciones [precipitaciones]="datos.probPrecipitacion"></app-precipitaciones>
+        <app-estado-cielo [estado]="datos.estadoCielo"></app-estado-cielo>
+
+        <div class="TODO" style="font-size: large; color: green; background-color: greenyellow; font-weight: bold;">
+        // TODO - INCLUIR LA HUMEDAD RELATIVA </div>
+</body>      
