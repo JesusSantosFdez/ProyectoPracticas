@@ -1,6 +1,6 @@
 <!-- Tormenta-->
 <ng-container *ngIf="contiene('tormenta'); else lluvia">
-    <img src="../../../../assets/estadoCielo/tormenta.png" alt=""> 
+    <img src="../../../../assets/estadoCielo/tormenta.png" alt="">
 </ng-container>
 <!-- Lluvia -->
 <ng-template #lluvia>
@@ -29,9 +29,14 @@
                     </ng-container>
                     <!-- Bruma -->
                     <ng-template #bruma>
-                        <ng-container *ngIf="contiene('bruma'); else despejado">
-                            <img src="../../../../assets/estadoCielo/niebla.png"                                 alt="">
+                        <ng-container *ngIf="contiene('bruma'); else cubierto">
+                            <img src="../../../../assets/estadoCielo/niebla.png" alt="">
                         </ng-container>
+                        <ng-template #cubierto>
+                            <ng-container *ngIf="contiene('cubierto'); else despejado">
+                                <img src="../../../../assets/estadoCielo/cubierto.png" alt="">
+                            </ng-container>
+                        </ng-template>
                         <!-- Despejado -->
                         <ng-template #despejado>
                             <img src="../../../../assets/estadoCielo/sol.png" alt="">

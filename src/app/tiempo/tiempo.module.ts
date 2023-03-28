@@ -10,6 +10,7 @@ import { PrecipitacionesComponent } from './components/precipitaciones/precipita
 import { EstadoCieloComponent } from './components/estado-cielo/estado-cielo.component';
 import { EstadoCieloImagenesComponent } from './components/estado-cielo-imagenes/estado-cielo-imagenes.component';
 import { EstadoCieloImagenesPeriodoComponent } from './components/estado-cielo-imagenes-periodo/estado-cielo-imagenes-periodo.component';
+import { HumedadComponent } from './components/humedad/humedad.component';
 
 
 
@@ -22,7 +23,8 @@ import { EstadoCieloImagenesPeriodoComponent } from './components/estado-cielo-i
     PrecipitacionesComponent,
     EstadoCieloComponent,
     EstadoCieloImagenesComponent,
-    EstadoCieloImagenesPeriodoComponent
+    EstadoCieloImagenesPeriodoComponent,
+    HumedadComponent
   ],
   imports: [
     CommonModule,

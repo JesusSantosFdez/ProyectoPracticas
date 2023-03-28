@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-estado-cielo-imagenes-periodo',
@@ -9,11 +9,4 @@ export class EstadoCieloImagenesPeriodoComponent {
 // Paramétro que guarda la descripcion y si existen los periodos
 @Input()
 periodo !: string | undefined;
-
-ngOnInit(): void {
-  //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
-  //Add 'implements OnInit' to the class.
-  console.log(this.periodo, 'periodo')
-}
-
 }
