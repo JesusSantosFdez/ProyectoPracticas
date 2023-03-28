@@ -1,0 +1,14 @@
+
+<p-splitter [style]="{ height: '200px' }" styleClass="mb-5">
+    
+    <ng-template pTemplate *ngFor="let viento of vientos; let i = index">
+        <div class="col flex align-items-center justify-content-center">
+            <!-- Se comienza poniendo la imagen que representa la dirección del viento:-->
+            <img style="height: 50px; width: 50px;" src="{{ obtenerRutaImagen(direcciones[i]) }}" alt="">
+            <img src="../../../../assets/viento/nubesita.png" style="height: 50px; width: 70px;" alt="">
+            <!-- Además se debe incluir la velocidad-->
+            <p><span id="velocidad">Velocidad:</span> {{viento.velocidad}}</p>
+        </div>
+
+    </ng-template>
+</p-splitter>

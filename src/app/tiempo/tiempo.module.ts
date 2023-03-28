@@ -11,6 +11,7 @@ import { EstadoCieloComponent } from './components/estado-cielo/estado-cielo.com
 import { EstadoCieloImagenesComponent } from './components/estado-cielo-imagenes/estado-cielo-imagenes.component';
 import { EstadoCieloImagenesPeriodoComponent } from './components/estado-cielo-imagenes-periodo/estado-cielo-imagenes-periodo.component';
 import { HumedadComponent } from './components/humedad/humedad.component';
+import { VientoComponent } from './components/viento/viento.component';
 
 
 
@@ -24,7 +25,8 @@ import { HumedadComponent } from './components/humedad/humedad.component';
     EstadoCieloComponent,
     EstadoCieloImagenesComponent,
     EstadoCieloImagenesPeriodoComponent,
-    HumedadComponent
+    HumedadComponent,
+    VientoComponent
   ],
   imports: [
     CommonModule,
