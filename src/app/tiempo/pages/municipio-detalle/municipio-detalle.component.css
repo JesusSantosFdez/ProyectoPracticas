@@ -46,6 +46,27 @@ se hace uso de un color de fondo difuminado*/
 
 }
   
+/* Estilo del botón de vuelta atrás*/
+#atras {
+    background-color: rgba(255, 255, 255, 0.747);
+    width: fit-content;
+    border-radius: 100px;
+    padding: 20px;
+    float: left;
+    margin: 0;
+    height: fit-content;
+    border: double;
+    margin-right: 6px;
+}
+#atras img{
+    height: 27px;
+    width: 27px;
+    margin-left: 20px;
+}
+#atras p{
+    text-decoration: underline;
+    font-size: x-small;
+}
 
   
   
