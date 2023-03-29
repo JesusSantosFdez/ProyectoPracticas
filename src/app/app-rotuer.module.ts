@@ -1,25 +1,30 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CalculadoraComponent } from './calculadora/calculadora.component';
+import { HomeComponent } from './home/home.component';
 
 //Declaramos la rutas que va a tener nuestra aplicación
 const routes: Routes = [
 
-  // Ruta N1. Calculadora
   {
+    path: '',
+    component: HomeComponent,
+    pathMatch:'full'
+  },
+  {
+    // Ruta N2. Calculadora
     path: 'calculadora',  // El path por defecto va a ser la calculadora
     component: CalculadoraComponent,
-    pathMatch: 'full'
   },
-  // Ruta N2. Tiempo
+  // Ruta N3. Tiempo
   {
     path: 'tiempo',
     loadChildren: () => import('src/app/tiempo/tiempo.module').then(m => m.TiempoModule)
   },
-  // Ruta N3. Cualquier otra ruta
+  // Ruta N4. Cualquier otra ruta
   {
     path: '**',
-    redirectTo: 'calculadora'
+    redirectTo: ''
 
   }
 

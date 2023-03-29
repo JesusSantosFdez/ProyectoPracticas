@@ -14,6 +14,7 @@ import { AppRotuerModule } from './app-rotuer.module';
 import { PrimeNgModule } from './prime-ng/prime-ng.module';
 import { TiempoModule } from './tiempo/tiempo.module';
 import { CalculadoraModule } from './calculadora/calculadora.module';
+import { HomeComponent } from './home/home.component';
 
 
 
@@ -22,7 +23,8 @@ import { CalculadoraModule } from './calculadora/calculadora.module';
   declarations: [
     AppComponent,
     CalculadoraComponent,
-    TiempoComponent
+    TiempoComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +35,7 @@ import { CalculadoraModule } from './calculadora/calculadora.module';
     PrimeNgModule,
     CalculadoraModule,
     TiempoModule,
-    HttpClientModule,
+    HttpClientModule
   ],
   exports: [
     PrimeNgModule

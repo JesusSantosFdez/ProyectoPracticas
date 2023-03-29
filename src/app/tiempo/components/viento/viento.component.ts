@@ -8,7 +8,7 @@ import { PuntoCardinal } from './punto-cardinal.enum';
   styleUrls: ['./viento.component.css']
 })
 
-export class VientoComponent implements OnInit{
+export class VientoComponent implements OnInit {
 
   // Variable en la que vamos a almacenar el viento recibido como parametro
   @Input()
@@ -21,7 +21,7 @@ export class VientoComponent implements OnInit{
   // Enum que será utilizado para obtener la imagen a mostrar 
   puntoCardinal: typeof PuntoCardinal = PuntoCardinal;
   direcciones !: string[];
-  
+
   ngOnInit(): void {
     //Obtenemos el número de elementos que se reciben
     this.nDatos = this.vientos.length;
@@ -29,17 +29,23 @@ export class VientoComponent implements OnInit{
       this.vientos = this.vientos.slice(-4);
       this.nDatos = 4;
     }
-    
+
     //Obtenemos las direcciones en un arreglo
     this.direcciones = this.vientos.map((viento) => viento.direccion);
   }
 
   // Método que retorna la ruta de la imagen correspondiente a una dirección
   obtenerRutaImagen(direccion: string): string {
-    if (Object.keys(PuntoCardinal).includes(direccion)) {
+    if (direccion === '') {
+      direccion = 'C';
       return PuntoCardinal[direccion as keyof typeof PuntoCardinal];
     }
-    return '';
+    else {
+      if (Object.keys(PuntoCardinal).includes(direccion)) {
+        return PuntoCardinal[direccion as keyof typeof PuntoCardinal];
+      }
+      return '';
+    }
   }
 
 }

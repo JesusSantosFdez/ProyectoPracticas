@@ -58,6 +58,10 @@ se hace uso de un color de fondo difuminado*/
     border: double;
     margin-right: 6px;
 }
+
+#atras:hover {
+    cursor: pointer;
+}
 #atras img{
     height: 27px;
     width: 27px;

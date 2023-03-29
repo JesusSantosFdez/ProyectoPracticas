@@ -15,9 +15,14 @@ export class MenuComponent implements OnInit{
   ngOnInit(): void {
       this.dockItems = [
         {
+          label: 'Home',
+          icon: "https://th.bing.com/th/id/OIP.g-QpSnxSX46iyetBSdaarQHaHa?pid=ImgDet&w=512&h=512&rs=1",
+          routerLink: '/'
+      },
+        {
           label: 'Calculadora',
           icon: "https://media.istockphoto.com/vectors/calculator-math-kawaii-character-vector-id839879412?k=6&m=839879412&s=612x612&w=0&h=Caqk6WbjzWH9Z7CRtwlPqxQik7UMq4wgekF9DASJ9dE=",
-          routerLink: '/'
+          routerLink: '/calculadora'
       },
       {
           label: 'Tiempo',
