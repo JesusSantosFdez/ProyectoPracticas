@@ -22,7 +22,6 @@ export class MunicipioDetalleComponent implements OnInit{
   ngOnInit(): void {
     // Cargada la página lo primero que se debe hacer es obtener los datos del municipio que se quiere mostrar
     this.datosMun = this.tiempoService.getDatosMunicipio();
-    console.log('Datos iniciales:', this.datosMun[0]);
     // Con esto ya se tienen los datos de los municipios y se podría trabajar con ellos. No obstante, si se recarga la página
     // se perderían estos datos por lo que habrá que obtenerlos de forma manual
     if (this.datosMun.length === 0){
@@ -49,7 +48,6 @@ let respuesta = resp as MunicipioDiario;
         .subscribe ((resp) => {
           // En este momento se tienen los datos del municipio como un array por lo que lo vamos a asignar a nuestra variable de la clase
           this.datosMun = resp;
-          console.log(' datos: ', this.datosMun[0]);
         })
       });
     }

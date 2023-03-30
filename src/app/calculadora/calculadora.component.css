@@ -1,22 +1,23 @@
-body{
-    background-image: url("https://i.pinimg.com/736x/cf/e1/6a/cfe16a382a65e19ab7d62767f764a54b.jpg");
+body {
+    background-image: url("https://th.bing.com/th/id/R.8c53389d0b4b69337f48820dcdaa0798?rik=YQrs92%2fbszybGg&pid=ImgRaw&r=0");
     height: 100%;
     width: 100%;
     border-style: solid;
     border-radius: 10px;
-    
+
     font-family: 'Lucida Handwriting', fantasy;
     padding: 20px;
 }
 
-.explicacion{
+.explicacion {
     font-size: 25px;
 }
 
 
-hr{
+hr {
     border-top: 5px dashed black;
     width: 500px;
+    margin-left: 40%;
 
 }
 
@@ -31,95 +32,66 @@ hr{
     background-color: #709C34;
     font-family: "Lucida Console", Courier, monospace;
     font-weight: bold;
-    font-size: 35px;
+    font-size: 25px;
 
     border-radius: 10px;
     padding: 20px;
 
     margin-bottom: 10px;
+    margin-left: 45%;
+    width: 295px;
 }
-#mCientifico, .cientifica{
+
+#mCientifico,
+.cientifica {
     background-color: #9AD58E;
 }
 
-.cientifica{
-    margin-bottom: 10px;
+.cientifica {
+    margin-bottom: 5px;
     border-radius: 10px;
     border-style: solid;
     border-width: 5px;
     border-color: black;
+    padding: 5px;
+    width: 298px;
 }
 
-.cientifica button{
+.cientifica button {
     background-color: #F5A912;
+    margin-left: 25px;
+}
+.cientifica .noActivated {
+    background-color: #989898;
+    border-color: rgb(174, 174, 174);
+    cursor: not-allowed;
 }
 
 #operacion {
     display: inline;
 }
 
-.error{
+.error {
     color: #AA4B39;
     font-size: 25px;
 }
 
-table button{
+table button {
     margin-left: 5px;
     margin-bottom: 5px;
 }
 
-table{
+table {
     background-color: gray;
     padding: 20px;
     border-radius: 5px;
 }
 
-/* Estilos para diferentes tamaños de pantalla*/
-
-/* Para pantallas grandes*/
-@media screen and (min-width:1800px) {
-    .pantalla{
-        /* Posición y tamaño*/
-        margin-left: 40%;
-        width: 20%;
-    }
-    .calculadora table, #mCientifico{
-        margin-left: 45%;
-    }
-
-}
-
-/* Para pantallas medianas*/
-@media screen and (max-width:1800px) {
-    .pantalla{
-        /* Estilo de elementos*/
-        font-size: 25px;
-
-        /* Posición y tamaño*/
-        margin-left: 35%;
-        width: 35%;
-
-    }
-    .calculadora table, #mCientifico{
-        margin-left: 40%;
-    }
-}
-
-/* Para pantallas medianas*/
-@media screen and (max-width:960px) {
-    .pantalla{
-        /* Estilo de elementos*/
-        font-size: 20px;
-
-        /* Posición y tamaño*/
-        margin-left: 25%;
-        width: 50%;
-
-    }
-    .calculadora table, #mCientifico{
-        margin-left: 30%;
-    }
+.calculadora table{
+    margin-left: 45%;
 }
 
 
-
+#mCientifico {
+    margin-left: 47%;
+}

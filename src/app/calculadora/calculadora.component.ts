@@ -34,9 +34,7 @@ export class CalculadoraComponent {
     */
 
     if (this.resCorre) {
-      console.log("hay un resultado")
       if (this.esOperador(boton)) {
-        console.log("se quiere continuar con la ejecución")
         // Si entramos en esta parte del código significa que se está continuando con la operación
 
         // Esto significa que se toma el resultado como primer operando
@@ -117,7 +115,6 @@ export class CalculadoraComponent {
 
   // Método para borrar los calculos y devolver todos los valores a nulo
   borrar() {
-    console.log('borrando...')
     this.operando1 = '';
     this.operador = '';
     this.operando2 = '';
@@ -168,8 +165,6 @@ export class CalculadoraComponent {
           this.resultado = parseFloat(this.operando1);
           for(i;i>1;i=i-1){
             this.resultado = this.resultado * parseInt(this.operando1);
-            console.log("algo")
-            
           }
         break;
     }
