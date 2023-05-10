@@ -1,0 +1,41 @@
+<body>
+    <h1> Calculadora V.2</h1>
+    <h3> Funciona igual, o peor. Pero es más pro.</h3>
+    <!-- CALCULADORA -->
+
+    <div class="calculator">
+        <div class="screen">
+          <div class="operation">{{operation}}</div>
+          <div class="result">{{result}}</div>
+        </div>
+        <div class="buttons">
+          <button class="btn clear" (click)="clear()">C</button>
+          <button class="btn delete" (click)="delete()">CE</button>
+          <button class="btn" (click)="add('7')">7</button>
+          <button class="btn" (click)="add('8')">8</button>
+          <button class="btn" (click)="add('9')">9</button>
+          <button class="btn operando" (click)="add('+')">+</button>
+          <button class="btn" (click)="add('4')">4</button>
+          <button class="btn" (click)="add('5')">5</button>
+          <button class="btn" (click)="add('6')">6</button>
+          <button class="btn operando" (click)="add('-')">-</button>
+          <button class="btn" (click)="add('1')">1</button>
+          <button class="btn" (click)="add('2')">2</button>
+          <button class="btn" (click)="add('3')">3</button>
+          <button class="btn operando" (click)="add('*')">*</button>
+          <button class="btn" (click)="add('0')">0</button>
+          <button class="btn" (click)="add('.')">.</button>
+          <button class="btn operando" (click)="add('/')">/</button>
+          <button class="btn calcular" (click)="calculate()">=</button>
+        </div>
+      </div>
+      
+
+
+    <!-- Enlace con la calucladora anterior: -->
+    <div id="oldCal">
+        <hr>
+        <h3>Pulsa aquí para acceder a la calculadora <span style="color:#B28048; text-decoration: underline; text-decoration-style: double;">antigua</span>: </h3>
+        <img class="gif" src="https://media.giphy.com/media/Lr9IC7PQqd9aOozMws/giphy.gif" routerLink="/calculadora" alt="GIF">
+    </div>
+</body>

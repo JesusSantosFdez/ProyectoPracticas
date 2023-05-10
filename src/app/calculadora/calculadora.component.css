@@ -95,3 +95,30 @@ table {
 #mCientifico {
     margin-left: 47%;
 }
+
+#newCal{
+    margin-top: 100px;
+    width: fit-content;
+}
+
+#newCal hr{
+    border-top: solid rgb(186, 95, 186);
+    margin: 0;
+    width: 100%;
+}
+
+.gif{
+    height: 150px;
+    width: auto;
+    border-radius: 10px;
+    border: 3px solid rgb(186, 95, 186);
+    margin-left: 25%;
+}
+
+.gif:hover{
+    border-color: rgb(255, 142, 255);
+}
+
+.gif:active{
+    border-color: rgb(159, 0, 159);
+}

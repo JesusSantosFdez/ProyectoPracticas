@@ -29,6 +29,11 @@ export class MenuComponent implements OnInit{
           icon: "https://th.bing.com/th/id/OIP.GyYUgam5C5O1aWceygGSTAAAAA?pid=ImgDet&w=432&h=432&rs=1",
           routerLink: 'tiempo/main'
       },
+      {
+          label: 'CalculadoraPro',
+          icon: "https://th.bing.com/th/id/OIP.92569244oGHP5BNO5gnlrAHaI5?pid=ImgDet&rs=1",
+          routerLink: '/calculadoraV2'
+      },
       ]
   }
 }
